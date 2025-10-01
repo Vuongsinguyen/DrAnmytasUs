@@ -1,0 +1,14 @@
+{
+  "name": "dr-anmytas-us",
+  "version": "1.0.0",
+  "description": "Dr. Anmytas US - WordPress Static Site",
+  "scripts": {
+    "build": "echo 'Building static site...' && mkdir -p out && cp -r static-site/* out/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vuongsinguyen/DrAnmytasUs.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

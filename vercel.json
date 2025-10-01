@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "out",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/static-site/$1"
+    }
+  ]
+}
