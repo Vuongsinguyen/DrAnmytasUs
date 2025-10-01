@@ -1,0 +1,142 @@
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║              🗄️  DATABASE SETUP - STEP BY STEP            ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+📍 BẠN ĐANG Ở: Step 2 - Database Setup
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 ĐIỀN THÔNG TIN DATABASE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+┌─────────────────────────────────────────────────────────┐
+│ Host:            localhost                              │
+│ Database Name:   dranmytas_local                        │
+│ Username:        root                                   │
+│ Password:        [để trống - không điền gì]            │
+└─────────────────────────────────────────────────────────┘
+
+⚠️  LƯU Ý QUAN TRỌNG
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Vì database "dranmytas_local" đã tồn tại, bạn PHẢI:
+
+1. Tìm dropdown có tên:
+   • "Action" HOẶC
+   • "Database Mode" HOẶC  
+   • "Setup" HOẶC
+   • "Installation Mode"
+   
+   (Thường nằm ngay dưới ô "Database Name")
+
+2. Chọn option:
+   ✅ "Connect and Remove All Data"
+   ✅ HOẶC "Empty the database and remove all data"
+   ✅ HOẶC "Manual Archive Extraction"
+   
+   ❌ KHÔNG chọn: "Create New Database" (sẽ bị lỗi)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 CÁC BƯỚC THỰC HIỆN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Step 1: Điền database info
+   ├─ Host: localhost
+   ├─ Database: dranmytas_local
+   ├─ User: root
+   └─ Password: [trống]
+
+Step 2: Chọn Action dropdown
+   └─ "Connect and Remove All Data" ✓
+
+Step 3: Click nút "Test Database"
+   └─ Đợi 2-3 giây → Sẽ thấy ✅ "Success"
+
+Step 4: Click nút "Next"
+   └─ Chuyển sang Step 3 (URL & Path Settings)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 NẾU GẶP LỖI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ "Database already exists"
+   → Chưa chọn đúng Action dropdown
+   → Phải chọn "Connect and Remove All Data"
+
+❌ "Can't connect to database"
+   → Check MySQL running: ./check_mysql.sh
+   → Hoặc restart: brew services restart mysql
+
+❌ "Access denied"
+   → Password để TRỐNG (không điền gì)
+   → Username phải là: root
+
+❌ "Unknown database"
+   → Database name gõ sai
+   → Phải là: dranmytas_local (không có space)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 DATABASE INFO (có thể dùng sau này)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Bạn có 2 databases:
+  
+  1. dranmytas_local      ← KHUYÊN DÙNG (trống)
+  2. dranmytas_wordpress  ← Backup option
+
+Để xem databases:
+  mysql -u root -e "SHOW DATABASES;"
+
+Để xóa database (nếu cần):
+  mysql -u root -e "DROP DATABASE dranmytas_wordpress;"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ CHECKLIST TRƯỚC KHI CLICK "TEST DATABASE"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+☑ Host = localhost
+☑ Database = dranmytas_local  
+☑ Username = root
+☑ Password = [trống]
+☑ Action = "Connect and Remove All Data"
+
+Nếu tất cả đúng → Click "Test Database" → ✅ Success!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 SAU KHI TEST DATABASE THÀNH CÔNG
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Click "Next" để sang Step 3
+2. Step 3 sẽ hỏi về URL và Path:
+   • Old URL: dranmytas.com (đã có sẵn)
+   • New URL: localhost:8888 (tự điền)
+   • Path: /Users/Nguyen.vs/Documents/DrAnmytasUs
+   
+3. Giữ nguyên settings → Click "Next"
+
+4. Step 4: Final Review → Click "Run Deployment"
+
+5. Đợi 5-10 phút để extract 23,596 files!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📞 NẾU CẦN GIÚP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Chụp màn hình lỗi và cho tôi biết:
+  • Step nào bị lỗi
+  • Message lỗi là gì
+  • Bạn đã điền gì vào form
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BẠN SẮP XONG RỒI! 🚀
+Chỉ còn vài click nữa là có WordPress site để làm việc!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

@@ -1,0 +1,403 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DevVN - Local Store Pro\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-20 14:29+0000\n"
+"PO-Revision-Date: 2023-05-12 04:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: English (United States)\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.2; wp-6.0\n"
+"X-Domain: devvn-local-stores-pro"
+
+#. %s template
+#: includes/main.php:925
+#, php-format
+msgid "%s không tồn tại."
+msgstr ""
+
+#: includes/settings/license.php:26
+msgid "Active License"
+msgstr ""
+
+#: includes/main.php:392 includes/main.php:430
+msgid "Add or remove items"
+msgstr ""
+
+#: includes/settings/general.php:91
+msgid "Bán kính tìm kiếm cửa hàng gần bạn"
+msgstr ""
+
+#: includes/main.php:106
+msgid ""
+"Bạn đã chặn vị trí hiện tại. Hãy đồng ý hoặc bật lại cho website này để tìm "
+"cửa hàng gần bạn nhất!"
+msgstr ""
+
+#: includes/settings/general.php:64
+msgid "Bật chế độ thay đổi kiểu bản đồ (satellite)"
+msgstr ""
+
+#: includes/settings/general.php:57
+msgid "Bật chỉ đường"
+msgstr ""
+
+#: includes/settings/main.php:15
+msgid "Check update"
+msgstr ""
+
+#: includes/main.php:393 includes/main.php:431
+msgid "Choose from the most used"
+msgstr ""
+
+#: templates/item.php:55
+msgid "Chỉ đường"
+msgstr "Direction"
+
+#: includes/metabox.php:62
+msgid "Chọn icon"
+msgstr ""
+
+#: includes/main.php:104
+msgid "Chọn Quận/Huyện"
+msgstr "Select district"
+
+#: includes/settings/general.php:97
+msgid "Chọn tỉnh thành mặc định khi load lần đầu"
+msgstr ""
+
+#: includes/main.php:112
+msgid "Có <strong></strong> cửa hàng"
+msgstr "Found <strong></strong> store(s)"
+
+#: includes/main.php:327 includes/main.php:328 includes/main.php:354
+msgid "Cửa hàng"
+msgstr ""
+
+#. Name of the plugin
+msgid "DevVN - Local Store Pro"
+msgstr ""
+
+#: includes/main.php:420
+msgid "Dòng sản phẩm"
+msgstr ""
+
+#: includes/main.php:336 includes/main.php:388 includes/main.php:426
+msgid "Edit Item"
+msgstr ""
+
+#: includes/metabox.php:38
+msgid "Email"
+msgstr ""
+
+#: includes/main.php:343
+msgid "Featured Image"
+msgstr ""
+
+#: includes/main.php:351
+msgid "Filter items list"
+msgstr ""
+
+#: includes/settings/general.php:41
+msgid "Google Maps API"
+msgstr ""
+
+#: includes/settings/general.php:71
+msgid "Hiển thị số đếm kết quả"
+msgstr ""
+
+#: includes/settings/general.php:84
+msgid "Hiển thị tìm kiếm địa chỉ gần bạn"
+msgstr ""
+
+#: includes/metabox.php:34
+msgid "Hotline"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://levantoan.com/"
+msgstr ""
+
+#. URI of the plugin
+msgid ""
+"https://levantoan.com/san-pham/plugin-danh-sach-dia-diem-local-store-pro/"
+msgstr ""
+
+#: includes/settings/general.php:25
+msgid "Icon marker"
+msgstr ""
+
+#: includes/main.php:347
+msgid "Insert into item"
+msgstr ""
+
+#: includes/main.php:329
+msgid "Item Archives"
+msgstr ""
+
+#: includes/main.php:330
+msgid "Item Attributes"
+msgstr ""
+
+#: includes/main.php:349 includes/main.php:398 includes/main.php:436
+msgid "Items list"
+msgstr ""
+
+#: includes/main.php:350 includes/main.php:399 includes/main.php:437
+msgid "Items list navigation"
+msgstr ""
+
+#: includes/main.php:796
+msgid "Không tìm thấy cửa hàng nào"
+msgstr "No stores found"
+
+#: includes/metabox.php:84
+msgid "Kéo icon hoặc click vào bản đồ để chọn địa chỉ chính xác"
+msgstr ""
+
+#: includes/settings/general.php:13
+msgid "Lat"
+msgstr ""
+
+#: includes/metabox.php:73
+msgid "Latitude"
+msgstr ""
+
+#: includes/settings/license.php:22
+msgid "License Key"
+msgstr ""
+
+#: includes/settings/general.php:14
+msgid "Lng"
+msgstr ""
+
+#: includes/metabox.php:77
+msgid "Longitude"
+msgstr ""
+
+#. Author of the plugin
+msgid "Lê Văn Toản"
+msgstr ""
+
+#: includes/main.php:105
+msgid "Lỗi không xác định. Vui lòng thử lại sau"
+msgstr "An unknown error. Please try again later"
+
+#: includes/metabox.php:51
+msgid "Marker icon"
+msgstr ""
+
+#: includes/settings/general.php:78
+msgid "Màu chủ đạo"
+msgstr ""
+
+#: includes/main.php:335
+msgid "New Item"
+msgstr ""
+
+#: includes/main.php:386 includes/main.php:424
+msgid "New Item Name"
+msgstr ""
+
+#: includes/functions.php:9
+#, php-format
+msgid "Ngày hết hạn: %s"
+msgstr ""
+
+#: templates/shortcode.php:8
+msgid "Nhập từ khoá tìm kiếm theo tên"
+msgstr "Enter keyword to search by name"
+
+#: includes/main.php:397 includes/main.php:435
+msgid "No items"
+msgstr ""
+
+#: includes/main.php:396 includes/main.php:434
+msgid "Not Found"
+msgstr ""
+
+#: includes/main.php:341
+msgid "Not found"
+msgstr ""
+
+#: includes/main.php:342
+msgid "Not found in Trash"
+msgstr ""
+
+#: includes/metabox.php:42
+msgid "Open"
+msgstr ""
+
+#: includes/main.php:384 includes/main.php:422
+msgid "Parent Item"
+msgstr ""
+
+#: includes/main.php:331 includes/main.php:385 includes/main.php:423
+msgid "Parent Item:"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Plugin tạo danh sách cửa hàng và hiển thị lên maps trực quan dễ dàng tìm "
+"kiếm. Shortcode hiển thị bản đồ [local_store]"
+msgstr ""
+
+#: includes/main.php:394 includes/main.php:432
+msgid "Popular Items"
+msgstr ""
+
+#: includes/main.php:325
+msgctxt "Post Type General Name"
+msgid "Cửa hàng"
+msgstr ""
+
+#: includes/main.php:326
+msgctxt "Post Type Singular Name"
+msgid "Cửa hàng"
+msgstr ""
+
+#: templates/shortcode.php:20
+msgid "Quận/Huyện"
+msgstr "District"
+
+#: includes/main.php:345
+msgid "Remove featured image"
+msgstr ""
+
+#: includes/main.php:340
+msgid "Search Item"
+msgstr ""
+
+#: includes/main.php:395 includes/main.php:433
+msgid "Search Items"
+msgstr ""
+
+#: includes/settings/general.php:36
+msgid "Select images"
+msgstr ""
+
+#: includes/main.php:391 includes/main.php:429
+msgid "Separate items with commas"
+msgstr ""
+
+#: includes/main.php:344
+msgid "Set featured image"
+msgstr ""
+
+#: includes/metabox.php:30
+msgid "Số điện thoại"
+msgstr ""
+
+#: includes/settings/general.php:49
+msgid "Sử dụng Fontawesome"
+msgstr ""
+
+#: includes/main.php:418
+msgctxt "Taxonomy General Name"
+msgid "Dòng sản phẩm"
+msgstr ""
+
+#: includes/main.php:380
+msgctxt "Taxonomy General Name"
+msgid "Tỉnh thành"
+msgstr ""
+
+#: includes/main.php:419
+msgctxt "Taxonomy Singular Name"
+msgid "Dòng sản phẩm"
+msgstr ""
+
+#: includes/main.php:381
+msgctxt "Taxonomy Singular Name"
+msgid "Tỉnh thành"
+msgstr ""
+
+#: includes/main.php:334
+msgid "Thêm mới"
+msgstr ""
+
+#: includes/main.php:333
+msgid "Thêm mới cửa hàng"
+msgstr ""
+
+#: includes/main.php:425
+msgid "Thêm mới dòng sản phẩm"
+msgstr ""
+
+#: includes/main.php:387
+msgid "Thêm mới tỉnh thành"
+msgstr ""
+
+#: includes/main.php:458
+msgid "Thông tin cửa hàng"
+msgstr ""
+
+#: includes/main.php:383 includes/main.php:421
+msgid "Toàn bộ"
+msgstr ""
+
+#: includes/main.php:332
+msgid "Toàn bộ cửa hàng"
+msgstr ""
+
+#: templates/shortcode.php:15
+msgid "Toàn Quốc"
+msgstr "Cities"
+
+#: includes/settings/general.php:11
+msgid "Toạ độ mặc định"
+msgstr ""
+
+#: includes/main.php:812
+#, php-format
+msgid "Tìm kiếm cửa hàng gần bạn (<=%dkm)"
+msgstr "Find a store near you (<=%dkm)"
+
+#: includes/main.php:382
+msgid "Tỉnh thành"
+msgstr ""
+
+#: includes/main.php:337 includes/main.php:389 includes/main.php:427
+msgid "Update Item"
+msgstr ""
+
+#: includes/main.php:348
+msgid "Uploaded to this item"
+msgstr ""
+
+#: includes/main.php:346
+msgid "Use as featured image"
+msgstr ""
+
+#: includes/main.php:338 includes/main.php:390 includes/main.php:428
+msgid "View Item"
+msgstr ""
+
+#: includes/main.php:339
+msgid "View Items"
+msgstr ""
+
+#: templates/item.php:52
+msgid "Xem thêm"
+msgstr "View more"
+
+#: includes/metabox.php:19
+msgid "Xếp hạng"
+msgstr ""
+
+#: includes/settings/general.php:19
+msgid "Zoom"
+msgstr ""
+
+#: includes/metabox.php:47
+msgid "Đường dẫn của nút"
+msgstr ""
+
+#: includes/metabox.php:14
+msgid "Địa chỉ"
+msgstr ""

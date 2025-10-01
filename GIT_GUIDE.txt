@@ -1,0 +1,305 @@
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║                 📝 GIT SETUP & WORKFLOW                       ║
+║              Dr Anmytas WordPress Project                     ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+
+✅ GIT IGNORE ĐÃ CẤU HÌNH
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+File .gitignore đã được tạo và cấu hình đầy đủ!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📦 NHỮNG GÌ ĐƯỢC TRACK (commit vào Git)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ WordPress Core Files:
+   • index.php, wp-*.php
+   • wp-admin/ (admin panel)
+   • wp-includes/ (core libraries)
+   • readme.html, license.txt
+
+✅ Themes (Custom code):
+   • wp-content/themes/flatsome/
+   • wp-content/themes/ruamat/
+
+✅ Plugins (All plugins):
+   • wp-content/plugins/*
+   (17 plugins including ACF Pro, Rank Math, etc.)
+
+✅ Helper Scripts:
+   • start_server.sh
+   • stop_server.sh
+   • check_mysql.sh
+   • cleanup_installer.sh
+   • monitor_extraction.sh
+
+✅ Documentation:
+   • README.md
+   • *.md files (guides)
+   • *_GUIDE.txt files
+   • EXTRACTION_SUMMARY.txt
+   • PROJECT_COMPLETE.txt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚫 NHỮNG GÌ BỊ IGNORE (không commit)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ Sensitive Files (Bảo mật):
+   • wp-config.php (database credentials)
+   • ADMIN_LOGIN.txt (login credentials)
+   • .env files
+
+❌ Large/Generated Files:
+   • wp-content/uploads/* (media files)
+   • wp-content/cache/* (cache)
+   • wp-content/backups*/* (backups)
+   • *.daf, *.zip (backup archives)
+
+❌ Temporary Files:
+   • *.log (server logs)
+   • nohup.out
+   • server.log
+   • extract_*.php, extract_*.py (temp scripts)
+   • .server.pid
+
+❌ Dependencies:
+   • node_modules/
+   • vendor/ (composer)
+   • */vendor/ (plugin vendors)
+
+❌ System Files:
+   • .DS_Store (macOS)
+   • Thumbs.db (Windows)
+   • .vscode/, .idea/ (IDE configs)
+
+❌ Installer Files:
+   • dup-installer/
+   • installer.php
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 QUICK GIT COMMANDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 1. Check what will be committed
+git status
+
+# 2. Add all files (respecting .gitignore)
+git add .
+
+# 3. Commit with message
+git commit -m "Initial WordPress setup - Dr Anmytas"
+
+# 4. Push to GitHub
+git push origin main
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 RECOMMENDED COMMIT WORKFLOW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Step 1: Initial Setup Commit
+────────────────────────────────────────────────────────────
+
+git add .
+git commit -m "feat: Initial WordPress setup
+
+- WordPress 6.8.2 extracted from Duplicator backup
+- 2 themes installed (Flatsome, Ruamat)
+- 17 plugins installed
+- Helper scripts for server management
+- Complete documentation
+- .gitignore configured"
+
+git push origin main
+
+
+Step 2: After Theme Customization
+────────────────────────────────────────────────────────────
+
+git add wp-content/themes/
+git commit -m "feat: Customize Flatsome theme
+
+- Updated header layout
+- Modified footer design
+- Added custom CSS"
+
+git push origin main
+
+
+Step 3: After Plugin Configuration
+────────────────────────────────────────────────────────────
+
+git add wp-content/plugins/
+git commit -m "chore: Configure plugins
+
+- Setup Rank Math SEO
+- Configure LiteSpeed Cache
+- Setup ACF custom fields"
+
+git push origin main
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 VERIFY WHAT'S TRACKED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# See untracked files
+git status --short
+
+# See ignored files
+git status --ignored
+
+# Check specific file
+git check-ignore -v wp-config.php
+git check-ignore -v ADMIN_LOGIN.txt
+
+# List all files that will be committed
+git add --dry-run .
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️  IMPORTANT: FILES YOU MUST NEVER COMMIT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. wp-config.php
+   → Contains database password
+   → Already in .gitignore ✓
+
+2. ADMIN_LOGIN.txt
+   → Contains admin credentials
+   → Already in .gitignore ✓
+
+3. .env files
+   → Environment variables
+   → Already in .gitignore ✓
+
+4. wp-content/uploads/*
+   → User uploaded media (can be huge)
+   → Already in .gitignore ✓
+
+5. Backup archives (*.daf, *.zip)
+   → Very large files (1.69GB)
+   → Already in .gitignore ✓
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔧 IF YOU ACCIDENTALLY COMMITTED SENSITIVE FILES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Remove from Git but keep local file
+git rm --cached wp-config.php
+git commit -m "chore: Remove wp-config.php from tracking"
+git push origin main
+
+# Remove from entire Git history (if already pushed)
+git filter-branch --force --index-filter \
+  "git rm --cached --ignore-unmatch wp-config.php" \
+  --prune-empty --tag-name-filter cat -- --all
+
+git push origin --force --all
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 USEFUL GIT COMMANDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# View commit history
+git log --oneline --graph --all
+
+# View changes before commit
+git diff
+
+# Undo last commit (keep changes)
+git reset --soft HEAD~1
+
+# Undo changes to a file
+git checkout -- filename.php
+
+# Create a branch for new feature
+git checkout -b feature/new-theme-layout
+
+# Switch back to main
+git checkout main
+
+# Merge feature branch
+git merge feature/new-theme-layout
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🌳 SUGGESTED BRANCH WORKFLOW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+main           → Production-ready code
+├── develop    → Development branch
+│   ├── feature/theme-header
+│   ├── feature/custom-plugin
+│   └── bugfix/mobile-menu
+
+Workflow:
+1. Create feature branch: git checkout -b feature/new-feature
+2. Make changes and commit
+3. Push branch: git push origin feature/new-feature
+4. Create Pull Request on GitHub
+5. Merge to develop, then main
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📝 COMMIT MESSAGE CONVENTIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+feat:     New feature
+fix:      Bug fix
+docs:     Documentation changes
+style:    Code style (formatting, etc.)
+refactor: Code refactoring
+test:     Adding tests
+chore:    Maintenance tasks
+
+Examples:
+  feat: Add custom product page layout
+  fix: Resolve mobile menu overflow issue
+  docs: Update README with deployment steps
+  style: Format theme CSS files
+  refactor: Optimize image loading in Flatsome
+  chore: Update plugin versions
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ CHECKLIST BEFORE FIRST COMMIT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+☑ .gitignore file created and configured
+☑ wp-config.php is ignored
+☑ ADMIN_LOGIN.txt is ignored
+☑ No *.daf or *.zip files will be committed
+☑ No log files will be committed
+☑ Themes and plugins will be tracked
+☑ Helper scripts will be tracked
+☑ Documentation will be tracked
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 READY TO COMMIT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Your .gitignore is properly configured!
+
+Safe to run:
+  git add .
+  git commit -m "Initial WordPress setup"
+  git push origin main
+
+All sensitive files are protected! ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Repository: https://github.com/Vuongsinguyen/DrAnmytasUs
+Branch:     main
+Status:     ✅ Ready for commit
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

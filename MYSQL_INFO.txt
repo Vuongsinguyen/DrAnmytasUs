@@ -1,0 +1,157 @@
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║        ✅ MySQL ĐÃ ĐƯỢC CÀI ĐẶT VÀ CẤU HÌNH XONG!        ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+📊 THÔNG TIN DATABASE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MySQL Version: 9.4.0 ✅
+Status: Running ✅
+Database Created: dranmytas_local ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📝 THÔNG TIN ĐIỀN VÀO DUPLICATOR INSTALLER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Trong trang Database Setup của Duplicator, điền như sau:
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ DATABASE SETTINGS                                     ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃                                                       ┃
+┃ Action:                                               ┃
+┃   🔘 Create New Database                             ┃
+┃      (Chọn option này)                               ┃
+┃                                                       ┃
+┃ Host:                                                 ┃
+┃   📝 localhost                                        ┃
+┃      (Hoặc: 127.0.0.1)                               ┃
+┃                                                       ┃
+┃ Database:                                             ┃
+┃   📝 dranmytas_local                                  ┃
+┃      (Database đã được tạo sẵn)                      ┃
+┃                                                       ┃
+┃ User:                                                 ┃
+┃   📝 root                                             ┃
+┃      (MySQL username)                                ┃
+┃                                                       ┃
+┃ Password:                                             ┃
+┃   📝 [để trống]                                       ┃
+┃      (Không có password - mới cài nên chưa set)     ┃
+┃                                                       ┃
+┃ Table Prefix:                                         ┃
+┃   📝 wpp0_                                            ┃
+┃      (Giữ nguyên từ site gốc)                        ┃
+┃                                                       ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 CÁC BƯỚC TIẾP THEO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Quay lại trình duyệt: http://localhost:8888/installer.php
+
+2. Trong trang "Step 3: Install Database", điền thông tin trên
+
+3. Click nút "TEST DATABASE" để kiểm tra kết nối
+   → Phải thấy thông báo "Success" ✅
+
+4. Nếu test thành công → Click "NEXT"
+
+5. Ở trang "Step 4: Test Site", điền:
+   ┌─────────────────────────────────────────────────────┐
+   │ Site Title: Dr Anmytas                              │
+   │ New URL: http://localhost:8888                      │
+   │ New Path: /Users/Nguyen.vs/Documents/DrAnmytasUs    │
+   └─────────────────────────────────────────────────────┘
+
+6. Click "RUN DEPLOYMENT" 🚀
+
+7. Đợi 2-5 phút → XONG! ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔧 QUẢN LÝ MYSQL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Start MySQL:
+  brew services start mysql
+
+Stop MySQL:
+  brew services stop mysql
+
+Restart MySQL:
+  brew services restart mysql
+
+Check Status:
+  brew services list | grep mysql
+
+Connect to MySQL:
+  mysql -u root
+
+Show Databases:
+  mysql -u root -e "SHOW DATABASES;"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️ LƯU Ý BẢO MẬT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Hiện tại MySQL KHÔNG CÓ PASSWORD (development mode)
+
+Nếu muốn set password cho user root:
+  mysql_secure_installation
+
+Hoặc:
+  mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_password';"
+
+Sau khi set password, nhớ update trong wp-config.php!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ "Can't connect to MySQL"
+  → brew services restart mysql
+  → Đợi 5 giây rồi thử lại
+
+❌ "Access denied for user 'root'"
+  → Xác nhận Password field để trống
+  → Hoặc dùng: mysql -u root (test trước)
+
+❌ "Database already exists"
+  → Không sao! Duplicator sẽ dùng database đó
+  → Hoặc xóa và tạo mới:
+    mysql -u root -e "DROP DATABASE dranmytas_local;"
+    mysql -u root -e "CREATE DATABASE dranmytas_local;"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 DATABASE INFO (Chi tiết)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Database Name:    dranmytas_local
+Character Set:    utf8mb4
+Collation:        utf8mb4_unicode_ci
+MySQL Version:    9.4.0
+Host:             localhost
+Port:             3306 (default)
+Socket:           /tmp/mysql.sock
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ TẤT CẢ ĐÃ SẴN SÀNG!
+
+MySQL đang chạy và database đã được tạo.
+Bạn có thể tiếp tục với Duplicator installer ngay bây giờ!
+
+Mở: http://localhost:8888/installer.php
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Good luck! 🎉

@@ -1,0 +1,82 @@
+# Duplicator backup files
+*.daf
+*.zip
+*_archive.*
+
+# Duplicator installer files
+dup-installer/
+installer.php
+
+# Log files
+*.log
+dup-installer-bootlog*
+server.log
+nohup.out
+
+# Keep documentation files
+!*_GUIDE.txt
+!*_SUMMARY.txt
+!MYSQL_INFO.txt
+!QUICK_START.txt
+!ERROR_FIXED.txt
+
+# Custom extraction scripts (temporary files)
+extract_archive.php
+extract_wordpress.php
+extract_duparchive.py
+full_extract.php
+extract_helper.sh
+.server.pid
+
+# WordPress files (extracted - be selective)
+wp-config.php
+wp-content/uploads/*
+wp-content/cache/*
+wp-content/backups*/*
+wp-content/upgrade/*
+wp-content/wflogs/*
+
+# Security - Don't commit credentials
+ADMIN_LOGIN.txt
+
+# But track themes and plugins
+!wp-content/uploads/.gitkeep
+!wp-content/cache/.gitkeep
+
+# WordPress auto-generated
+sitemap.xml
+sitemap.xml.gz
+wp-sitemap*.xml
+
+# Debug files
+debug.log
+error_log
+php_errors.log
+
+# Database files
+*.sql
+*.sql.gz
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (if any)
+node_modules/
+
+# Composer vendor (if any)
+vendor/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# PHP
+*.cache
