@@ -27,30 +27,59 @@ def fix_image_paths():
         if not file_path.exists():
             continue
         
+        # Calculate directory depth to determine number of ../ needed
+        # Count slashes after the base directory (out/, static-site-en/, static-site/)
+        parts = file_path.parts
+        if 'out' in parts:
+            depth = len(parts) - parts.index('out') - 2  # -2 for 'out' and 'index.html'
+        elif 'static-site-en' in parts:
+            depth = len(parts) - parts.index('static-site-en') - 2
+        elif 'static-site' in parts:
+            depth = len(parts) - parts.index('static-site') - 2
+        else:
+            depth = 1
+        
+        # Build the correct prefix (../ or ../../ or ../../../ etc.)
+        prefix = '../' * depth if depth > 0 else ''
+        
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix patterns where wp-content/uploads is missing ../
-        # Pattern 1: data-src="wp-content/uploads -> data-src="../wp-content/uploads
+        # Fix patterns - replace incorrect paths with correct depth
+        # Pattern 1: data-src="wp-content/uploads or data-src="../wp-content/uploads (wrong depth)
         content = re.sub(
-            r'data-src="wp-content/uploads',
-            r'data-src="../wp-content/uploads',
+            r'data-src="(\.\./)*(wp-content/uploads)',
+            f'data-src="{prefix}\\2',
             content
         )
         
-        # Pattern 2: data-srcset="wp-content/uploads -> data-srcset="../wp-content/uploads
+        # Pattern 2: data-srcset="wp-content/uploads or data-srcset="../wp-content/uploads (wrong depth)
         content = re.sub(
-            r'data-srcset="wp-content/uploads',
-            r'data-srcset="../wp-content/uploads',
+            r'data-srcset="(\.\./)*(wp-content/uploads)',
+            f'data-srcset="{prefix}\\2',
             content
         )
         
-        # Pattern 3: Inside srcset attributes, fix paths like "wp-content/uploads" -> "../wp-content/uploads"
+        # Pattern 3: src="wp-content or src="../wp-content (wrong depth)
         content = re.sub(
-            r'([,\s])wp-content/uploads',
-            r'\1../wp-content/uploads',
+            r'src="(\.\./)*(wp-content/)',
+            f'src="{prefix}\\2',
+            content
+        )
+        
+        # Pattern 4: href="wp-content or href="../wp-content (wrong depth)
+        content = re.sub(
+            r'href="(\.\./)*(wp-content/)',
+            f'href="{prefix}\\2',
+            content
+        )
+        
+        # Pattern 5: Inside srcset attributes (with commas and spaces)
+        content = re.sub(
+            r'([,\s])(\.\./)*(wp-content/uploads)',
+            f'\\1{prefix}\\3',
             content
         )
         
