@@ -39,6 +39,16 @@ def clean_wordpress_references(html_content):
     # Remove admin bar scripts
     html_content = re.sub(r'<script[^>]*admin-bar[^>]*>.*?</script>', '', html_content, flags=re.DOTALL)
     
+    # Remove TranslatePress language switcher
+    html_content = re.sub(r'<link[^>]*trp-language-switcher[^>]*>', '', html_content)
+    html_content = re.sub(r'<script[^>]*trp-language-switcher[^>]*>.*?</script>', '', html_content, flags=re.DOTALL)
+    html_content = re.sub(r'<script[^>]*translatepress[^>]*>.*?</script>', '', html_content, flags=re.DOTALL)
+    html_content = re.sub(r'<link[^>]*translatepress[^>]*>', '', html_content)
+    
+    # Remove WordPress admin-bar and edit links
+    html_content = re.sub(r'<div[^>]*id=["\']wpadminbar["\'][^>]*>.*?</div>', '', html_content, flags=re.DOTALL)
+    html_content = re.sub(r'<link[^>]*admin-bar[^>]*>', '', html_content)
+    
     # Remove WooCommerce and WordPress JavaScript variables (handle nested objects)
     html_content = re.sub(r'var wc_add_to_cart_params = \{.*?\};', '', html_content, flags=re.DOTALL)
     html_content = re.sub(r'var woocommerce_params = \{.*?\};', '', html_content, flags=re.DOTALL)
