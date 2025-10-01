@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Dr. Anmytas US - WordPress Static Site",
   "scripts": {
-    "build": "echo 'Building static site...' && mkdir -p out && cp -r static-site/* out/",
+    "build": "echo 'Building static site...' && mkdir -p out && cp -r static-site/* out/ && cp -r wp-content out/ && cp -r wp-includes out/",
     "dev": "python3 -m http.server 8888 --directory out",
     "start": "npm run dev"
   },

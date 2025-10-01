@@ -30,18 +30,43 @@ extract_helper.sh
 
 # WordPress files (extracted - be selective)
 wp-config.php
-wp-content/uploads/*
 wp-content/cache/*
 wp-content/backups*/*
 wp-content/upgrade/*
 wp-content/wflogs/*
 
+# Ignore WordPress plugins (PHP files not needed for static site)
+wp-content/plugins/
+wp-content/mu-plugins/
+
+# Ignore out/ directory - Vercel will build this automatically
+out/
+
 # Security - Don't commit credentials
 ADMIN_LOGIN.txt
 
-# But track themes and plugins
-!wp-content/uploads/.gitkeep
-!wp-content/cache/.gitkeep
+# But keep wp-content/uploads/ (images needed for Vercel build)
+!wp-content/uploads/
+# But ignore large files (videos and original high-res images)
+wp-content/uploads/**/*.mp4
+wp-content/uploads/**/*.MP4
+wp-content/uploads/**/*.mov
+wp-content/uploads/**/*.MOV
+wp-content/uploads/**/*.avi
+wp-content/uploads/**/*.AVI
+
+# Keep theme assets (CSS, JS, fonts) but not PHP files
+!wp-content/themes/
+wp-content/themes/**/*.php
+!wp-content/themes/*/assets/
+!wp-content/themes/*/style.css
+
+# Keep wp-includes for static assets only
+!wp-includes/
+wp-includes/**/*.php
+!wp-includes/css/
+!wp-includes/js/
+!wp-includes/fonts/
 
 # WordPress auto-generated
 sitemap.xml
