@@ -44,6 +44,14 @@ wp-content/mu-plugins/
 !out/
 !out/**
 
+# But exclude video files from out/ (too large for Git)
+out/**/*.mp4
+out/**/*.MP4
+out/**/*.mov
+out/**/*.MOV
+out/**/*.avi
+out/**/*.AVI
+
 # Security - Don't commit credentials
 ADMIN_LOGIN.txt
 
