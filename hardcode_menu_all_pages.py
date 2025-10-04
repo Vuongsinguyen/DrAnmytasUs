@@ -126,20 +126,36 @@ def remove_script_tags(html_content):
     """
     Remove menu-loader.js and footer-loader.js script tags
     """
-    # Remove menu-loader.js
+    # Remove menu-loader.js (both relative and absolute paths)
     html_content = re.sub(
-        r'<script\s+src=["\']shared/menu-loader\.js["\'].*?></script>\s*',
+        r'<script\s+src=["\'][\.\/]*shared/menu-loader\.js["\'].*?></script>\s*',
         '',
         html_content,
         flags=re.IGNORECASE | re.DOTALL
     )
     
-    # Remove footer-loader.js
+    # Remove footer-loader.js (both relative and absolute paths)
     html_content = re.sub(
-        r'<script\s+src=["\']shared/footer-loader\.js["\'].*?></script>\s*',
+        r'<script\s+src=["\'][\.\/]*shared/footer-loader\.js["\'].*?></script>\s*',
         '',
         html_content,
         flags=re.IGNORECASE | re.DOTALL
+    )
+    
+    # Remove comments about menu loader
+    html_content = re.sub(
+        r'<!--\s*Menu will be loaded by menu-loader\.js\s*-->\s*',
+        '',
+        html_content,
+        flags=re.IGNORECASE
+    )
+    
+    # Remove comments about footer loader
+    html_content = re.sub(
+        r'<!--\s*Load shared footer\s*-->\s*',
+        '',
+        html_content,
+        flags=re.IGNORECASE
     )
     
     return html_content
