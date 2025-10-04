@@ -1,50 +1,9 @@
-# Duplicator backup files
-*.daf
-*.zip
-*_archive.*
-
-# Duplicator installer files
-dup-installer/
-installer.php
-
-# Log files
-*.log
-dup-installer-bootlog*
-server.log
-nohup.out
-
-# Keep documentation files
-!*_GUIDE.txt
-!*_SUMMARY.txt
-!MYSQL_INFO.txt
-!QUICK_START.txt
-!ERROR_FIXED.txt
-
-# Custom extraction scripts (temporary files)
-extract_archive.php
-extract_wordpress.php
-extract_duparchive.py
-full_extract.php
-extract_helper.sh
-.server.pid
-
-# WordPress files (extracted - be selective)
-wp-config.php
-wp-content/cache/*
-wp-content/backups*/*
-wp-content/upgrade/*
-wp-content/wflogs/*
-
-# Ignore WordPress plugins (PHP files not needed for static site)
-wp-content/plugins/
-wp-content/mu-plugins/
-
-# === STATIC SITE OUTPUT (out/) ===
-# Allow all static site files for deployment
+# === STATIC SITE - ONLY TRACK OUT/ DIRECTORY ===
+# Track only the static site output
 !out/
 !out/**
 
-# But exclude video files from out/ (too large for Git)
+# Exclude large video files from out/
 out/**/*.mp4
 out/**/*.MP4
 out/**/*.mov
@@ -52,31 +11,46 @@ out/**/*.MOV
 out/**/*.avi
 out/**/*.AVI
 
-# Security - Don't commit credentials
+# === IGNORE ALL WORDPRESS FILES ===
+# WordPress root files
+index.php
+wp-*.php
+xmlrpc.php
+wp-config.php
+wp-cli.phar
+
+# WordPress directories
+wp-admin/
+wp-includes/
+wp-content/
+
+# Duplicator backup files
+*.daf
+*.zip
+*_archive.*
+dup-installer/
+installer.php
+
+# Extraction scripts
+extract_*.php
+extract_*.py
+*.sh
+!start_server.sh
+!stop_server.sh
+
+# Keep documentation files
+!*_GUIDE.txt
+!*_GUIDE.md
+!*_SUMMARY.txt
+!MYSQL_INFO.txt
+!QUICK_START.txt
+!ERROR_FIXED.txt
+!README.md
+!DEPLOYMENT_GUIDE.md
+!SERVER_GUIDE.md
+
+# Security - credentials
 ADMIN_LOGIN.txt
-
-# But keep wp-content/uploads/ (images needed for Vercel build)
-!wp-content/uploads/
-# But ignore large files (videos and original high-res images)
-wp-content/uploads/**/*.mp4
-wp-content/uploads/**/*.MP4
-wp-content/uploads/**/*.mov
-wp-content/uploads/**/*.MOV
-wp-content/uploads/**/*.avi
-wp-content/uploads/**/*.AVI
-
-# Keep theme assets (CSS, JS, fonts) but not PHP files
-!wp-content/themes/
-wp-content/themes/**/*.php
-!wp-content/themes/*/assets/
-!wp-content/themes/*/style.css
-
-# Keep wp-includes for static assets only
-!wp-includes/
-wp-includes/**/*.php
-!wp-includes/css/
-!wp-includes/js/
-!wp-includes/fonts/
 
 # WordPress auto-generated
 sitemap.xml
@@ -87,6 +61,10 @@ wp-sitemap*.xml
 debug.log
 error_log
 php_errors.log
+*.log
+dup-installer-bootlog*
+server.log
+nohup.out
 
 # Database files
 *.sql
