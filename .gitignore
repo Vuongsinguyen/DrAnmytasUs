@@ -39,6 +39,11 @@ wp-content/wflogs/*
 wp-content/plugins/
 wp-content/mu-plugins/
 
+# Ignore out/ directory except homepage files
+out/
+!out/index.html
+!out/wp-content/themes/flatsome/assets/js/chunk.slider.js
+
 # Security - Don't commit credentials
 ADMIN_LOGIN.txt
 
