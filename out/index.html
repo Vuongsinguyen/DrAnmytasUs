@@ -174,6 +174,18 @@ h1, h2, h3, h4, h5, h6, .heading-font {
 .nav-column>li>a:hover, .nav-dropdown>li>a:hover {
 	color: black !important
 }
+
+/* Fix menu colors - only active item should be green */
+.header-bottom-nav.nav > li > a {
+	color: #000000 !important;
+}
+.header-bottom-nav.nav > li.current-menu-item > a,
+.header-bottom-nav.nav > li.current_page_item > a,
+.header-bottom-nav.nav > li.active > a,
+.header-bottom-nav.nav > li > a:hover {
+	color: #005c62 !important;
+}
+
 /*
 h2 span, .product-title a, .woocommerce-breadcrumb {font-family: "abchanel-corpo-vietnam-semibold" !important}
 h1 {
@@ -631,7 +643,7 @@ a#accordion-description-label {
 <div class="header-bottom wide-nav flex-has-center hide-for-medium" id="wide-nav">
 <div class="flex-row container">
 <div class="flex-col hide-for-medium flex-center">
-<ul class="nav header-nav header-bottom-nav nav-center nav-divided nav-size-xlarge nav-spacing-xlarge nav-uppercase">
+<ul class="nav header-nav header-bottom-nav nav-center nav-size-xlarge nav-spacing-xlarge nav-uppercase">
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-9 current_page_item menu-item-2068 active menu-item-design-default" id="menu-item-2068"><a aria-current="page" class="nav-top-link" href="index.html">Homepage</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2067 menu-item-design-default" id="menu-item-2067"><a class="nav-top-link" href="gioi-thieu/index.html">About Us</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2065 menu-item-design-default" id="menu-item-2065"><a class="nav-top-link" href="shop/index.html">Products</a></li>
