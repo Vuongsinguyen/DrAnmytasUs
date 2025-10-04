@@ -3,12 +3,8 @@
   "version": "1.0.0",
   "description": "Dr. Anmytas US - WordPress Static Site",
   "scripts": {
-    "build": "echo 'Building English static site...' && mkdir -p out && cp -r static-site-en/* out/ && cp -r wp-content out/ && cp -r wp-includes out/",
-    "build:vi": "echo 'Building Vietnamese static site...' && mkdir -p out && cp -r static-site/* out/ && cp -r wp-content out/ && cp -r wp-includes out/",
-    "build:en": "echo 'Building English static site...' && mkdir -p out && cp -r static-site-en/* out/ && cp -r wp-content out/ && cp -r wp-includes out/",
-    "dev": "npm run build:en && python3 -m http.server 8888 --directory out",
-    "dev:vi": "npm run build:vi && python3 -m http.server 8888 --directory out",
-    "dev:en": "npm run build:en && python3 -m http.server 8888 --directory out",
+    "build": "echo 'Static site is already built in out directory'",
+    "dev": "python3 -m http.server 8888 --directory out",
     "serve": "python3 -m http.server 8888 --directory out",
     "serve:fast": "python3 -m http.server 8888 --directory out",
     "start": "npm run dev"
