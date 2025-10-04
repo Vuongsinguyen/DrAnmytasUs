@@ -39,9 +39,11 @@ wp-content/wflogs/*
 wp-content/plugins/
 wp-content/mu-plugins/
 
-# Ignore out/ directory except homepage files
+# Ignore out/ directory except homepage and shared components
 out/
 !out/index.html
+!out/index.html@p=*.html
+!out/shared/
 !out/wp-content/themes/flatsome/assets/js/chunk.slider.js
 # Allow all homepage images
 !out/wp-content/uploads/2023/08/logo-dr-anmytas-white.svg
