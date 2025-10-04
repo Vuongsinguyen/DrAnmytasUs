@@ -8,7 +8,7 @@ const MENU_TEMPLATE = `
 <div class="header-bottom wide-nav flex-has-center hide-for-medium" id="wide-nav">
   <div class="flex-row container">
     <div class="flex-col hide-for-medium flex-center">
-      <ul class="nav header-nav header-bottom-nav nav-center nav-divided nav-size-xlarge nav-spacing-xlarge nav-uppercase">
+      <ul class="nav header-nav header-bottom-nav nav-center nav-size-xlarge nav-spacing-xlarge nav-uppercase">
         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-2068 menu-item-design-default" id="menu-item-2068">
           <a class="nav-top-link" href="/index.html">Homepage</a>
         </li>
