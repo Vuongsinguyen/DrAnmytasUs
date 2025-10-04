@@ -90,7 +90,7 @@ function setActiveMenuItem() {
   
   // Remove active classes from all items
   document.querySelectorAll('.menu-item').forEach(item => {
-    item.classList.remove('current-menu-item', 'current_page_item', 'active');
+    item.classList.remove('current-menu-item', 'current_page_item', 'current', 'active');
   });
   
   // Add active class to current page
@@ -105,7 +105,7 @@ function setActiveMenuItem() {
           (cleanPath.includes(cleanHref) && cleanHref !== '/')) {
         const menuItem = link.closest('.menu-item');
         if (menuItem) {
-          menuItem.classList.add('current-menu-item', 'current_page_item', 'active');
+          menuItem.classList.add('current-menu-item', 'current_page_item', 'current', 'active');
         }
       }
     }
