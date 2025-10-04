@@ -43,7 +43,30 @@ wp-content/mu-plugins/
 out/
 !out/index.html
 !out/wp-content/themes/flatsome/assets/js/chunk.slider.js
-!out/wp-content/uploads/2025/05/rm-bs-Hoa.png
+# Allow all homepage images
+!out/wp-content/uploads/2023/08/logo-dr-anmytas-white.svg
+!out/wp-content/uploads/2024/10/hop-tac-*.png
+!out/wp-content/uploads/2025/01/thong-bao-k-ban-hang.avif
+!out/wp-content/uploads/2025/01/448671406_886197290198974_5594557920670635517_n.jpg*
+!out/wp-content/uploads/2025/02/cropped-favicon-*
+!out/wp-content/uploads/2025/02/26*
+!out/wp-content/uploads/2025/02/476765843_122157843992513649_5704723393491875327_n*
+!out/wp-content/uploads/2025/03/bai-viet-web-1*
+!out/wp-content/uploads/2025/03/sac-to*
+!out/wp-content/uploads/2025/03/z6364316478357_d4b8573113674feb0b0a20125229f995*
+!out/wp-content/uploads/2025/04/IR1*
+!out/wp-content/uploads/2025/04/Pattern-final-final.png
+!out/wp-content/uploads/2025/04/banner3.jpg
+!out/wp-content/uploads/2025/05/221*
+!out/wp-content/uploads/2025/05/bn-anmytas-8*
+!out/wp-content/uploads/2025/05/bs-an*
+!out/wp-content/uploads/2025/05/logo-dr-anmytas.svg
+!out/wp-content/uploads/2025/05/maxresdefault*
+!out/wp-content/uploads/2025/05/rm-bs-Hoa*
+!out/wp-content/uploads/2025/05/slide-anmytas-4*
+!out/wp-content/uploads/2025/05/slide-anmytas-5*
+!out/wp-content/uploads/2025/05/thum1*
+!out/wp-content/uploads/2025/09/z7044634509084_f70e81d74e33b31a2c2aa6584423bbda*
 
 # Security - Don't commit credentials
 ADMIN_LOGIN.txt
