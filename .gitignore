@@ -43,6 +43,7 @@ wp-content/mu-plugins/
 out/
 !out/index.html
 !out/wp-content/themes/flatsome/assets/js/chunk.slider.js
+!out/wp-content/uploads/2025/05/rm-bs-Hoa.png
 
 # Security - Don't commit credentials
 ADMIN_LOGIN.txt
