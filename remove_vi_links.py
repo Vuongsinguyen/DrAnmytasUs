@@ -23,16 +23,18 @@ def clean_html(content):
     
     # Remove menu items with /vi/ links
     # Pattern: <li...><a href="/vi/...">...</a></li>
+    # Matches: /vi/, vi/, ../vi/, ../../vi/, etc.
     content = re.sub(
-        r'<li[^>]*>\s*<a[^>]*href=["\']/?vi/[^"\']*["\'][^>]*>.*?</a>\s*</li>\s*',
+        r'<li[^>]*>\s*<a[^>]*href=["\'][^"\']*?vi/[^"\']*["\'][^>]*>.*?</a>\s*</li>\s*',
         '',
         content,
         flags=re.IGNORECASE | re.DOTALL
     )
     
     # Remove standalone links to /vi/
+    # Matches: /vi/, vi/, ../vi/, ../../vi/, etc.
     content = re.sub(
-        r'<a[^>]*href=["\']/?vi/[^"\']*["\'][^>]*>.*?</a>',
+        r'<a[^>]*href=["\'][^"\']*?vi/[^"\']*["\'][^>]*>.*?</a>',
         '',
         content,
         flags=re.IGNORECASE | re.DOTALL
