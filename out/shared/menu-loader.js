@@ -5,7 +5,7 @@
 
 // Menu HTML Template
 const MENU_TEMPLATE = `
-<div class="header-bottom wide-nav nav-dark flex-has-center hide-for-medium" id="wide-nav">
+<div class="header-bottom wide-nav flex-has-center hide-for-medium" id="wide-nav">
   <div class="flex-row container">
     <div class="flex-col hide-for-medium flex-center">
       <ul class="nav header-nav header-bottom-nav nav-center nav-divided nav-size-xlarge nav-spacing-xlarge nav-uppercase">
