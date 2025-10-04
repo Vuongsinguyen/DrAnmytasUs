@@ -39,9 +39,6 @@ wp-content/wflogs/*
 wp-content/plugins/
 wp-content/mu-plugins/
 
-# Ignore out/ directory - Vercel will build this automatically
-out/
-
 # Security - Don't commit credentials
 ADMIN_LOGIN.txt
 
